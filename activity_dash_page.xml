@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Dashboard"
+            android:textColor="#000"
+            android:textSize="26sp">
+
+
+        </TextView>
+
+        <Button
+            android:id="@+id/police"
+            android:layout_width="410sp"
+            android:layout_height="150sp"
+            android:text="police"
+            android:backgroundTint="#00008B"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/Fire"
+            android:layout_width="410sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#FF8C00"
+            android:text="fire_emergency" />
+
+        <Button
+            android:id="@+id/HOSPITAL"
+            android:layout_width="410sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#FF0000"
+            android:text="hospital" />
+
+        <Button
+            android:id="@+id/violence"
+            android:layout_width="410sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#808080"
+            android:text="domestic_violence" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
