@@ -18,6 +18,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        // This is the "register" button. It opens up the registration page
         button = (Button) findViewById(R.id.btnRegisterK);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +26,7 @@ public class Login extends AppCompatActivity {
                 openActivity2();
             }
         });
+        //This button opens the dashpage
         btnDash = (Button) findViewById(R.id.registerBtn);
         btnDash.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,12 +37,12 @@ public class Login extends AppCompatActivity {
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
     }
-
+    // Method to open the registration page
     public void openActivity2() {
         Intent intent = new Intent(this, RegPage.class);
         startActivity(intent);
     }
-
+    // This method opens the dashboard page
     public void openActivity3() {
         Intent intent = new Intent(this, DashPage.class);
         startActivity(intent);
