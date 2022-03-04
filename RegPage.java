@@ -66,6 +66,7 @@ public class RegPage extends AppCompatActivity {
         });
 
     }
+    //Validation method 
     private Boolean validateinfo(String firstname, String lastname, String number, String emailaddress, String password, String passwordconfirm) {
         if(firstname.length()==0){
             UserName.requestFocus();
@@ -118,6 +119,7 @@ public class RegPage extends AppCompatActivity {
             return false;
         }
         else{
+            //If the input is correct, send the details to a database
             mAuth.createUserWithEmailAndPassword(emailaddress, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
