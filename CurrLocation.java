@@ -23,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions; class ActivityMyLocation
 }
 
 public class CurrLocation extends FragmentActivity implements OnMapReadyCallback {
-
+//Variable declarations
     private GoogleMap mMap;
     private LocationManager locationManager;
     private LocationListener locationListener;
@@ -42,6 +42,7 @@ public class CurrLocation extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        //Below we ask the user for permissions to use certain features on their mobile devices.
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS}, PackageManager.PERMISSION_GRANTED);
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PackageManager.PERMISSION_GRANTED);
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.INTERNET}, PackageManager.PERMISSION_GRANTED);
@@ -68,9 +69,11 @@ public class CurrLocation extends FragmentActivity implements OnMapReadyCallback
         locationListener=new LocationListener() {
             @Override
             public void onLocationChanged(@NonNull Location location) {
+                //Here we try to send the users location in an sms to a phone number specified by the user.
                 try{
                     latLng=new LatLng(location.getLatitude(),location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(latLng).title("My Position"));
+                    //Whenever the users location changes then an alert must be sent
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                     String phoneNumber="0738740665";
                     String myLatitude= String.valueOf(location.getLatitude());
