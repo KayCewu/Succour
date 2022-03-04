@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegPage extends AppCompatActivity {
+    //Instantiate database connection
     private FirebaseAuth mAuth;
     DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReferenceFromUrl("https://succuorreg-default-rtdb.firebaseio.com/");
     EditText UserName, UserSurname,UserPhoneNo,UserEmail,Userpassword,UserPassConfirm;
